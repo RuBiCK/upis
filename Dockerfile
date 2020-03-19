@@ -1,4 +1,4 @@
-FROM alpine
+FROM arm32v7/alpine
 
 # basic flask environment
 RUN apk add --no-cache bash py2-pip \
