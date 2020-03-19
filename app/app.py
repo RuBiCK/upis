@@ -25,7 +25,7 @@ def rupload():
         f.write(request.get_data(cache=True, as_text=False, parse_form_data=False))
 
     if DEBUG:
-        sys.stdout.write('Picture ' + filename + 'saved\n')
+        sys.stdout.write('Picture ' + filename + ' saved\n')
 
     return ('200')
 app.run(host="0.0.0.0", port=PORT, debug=DEBUG_FLASK)
