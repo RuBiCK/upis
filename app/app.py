@@ -28,4 +28,5 @@ def rupload():
         sys.stdout.write('Picture ' + filename + ' saved\n')
 
     return ('200')
-app.run(host="0.0.0.0", port=PORT, debug=DEBUG_FLASK)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=PORT, debug=DEBUG_FLASK)
