@@ -13,12 +13,9 @@ RUN mkdir ${APP_DIR}
 	#&& chmod 777 /root/ -R
 VOLUME ${APP_DIR}
 WORKDIR ${APP_DIR}
-RUN chmod -x ${APP_DIR}/*.py
-
 
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 COPY ./app /app
-ENTRYPOINT [ "python" ]
-CMD [ "app.py" ]
+ENTRYPOINT [ "python", "app.py" ]
