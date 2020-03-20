@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 FROM alpine:3.7
+=======
+FROM arm32v7/alpine:3.9.5
+>>>>>>> 4cab276e3b2245a1de86aa798e6627e4a40d4a62
 
 # basic flask environment
 RUN apk add --no-cache bash py2-pip \
