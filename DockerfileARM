@@ -1,4 +1,6 @@
-FROM arm32v7/alpine:3.7
+FROM docker.io/project31/aarch64-alpine-qemu:3.5
+RUN [ “cross-build-start” ]
+
 
 # basic flask environment
 RUN apk add --no-cache bash py2-pip \
@@ -18,11 +20,4 @@ RUN pip install -r /requirements.txt
 COPY ./app /app
 CMD ["flask", "run"]
 
-
-
-FROM docker.io/project31/aarch64-alpine-qemu:3.5
-RUN [ “cross-build-start” ]
-…
-whatever you need to do in your Dockerfile
-…
 RUN [ “cross-build-end” ]
